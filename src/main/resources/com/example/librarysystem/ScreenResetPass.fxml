@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.controllers.ResetPassController">
+   <children>
+      <BorderPane prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1280.0" style="-fx-background-color: #dedede;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fx:id="Version" strokeType="OUTSIDE" strokeWidth="0.0" text="STIU Library Management System | Version 1.0.0" textAlignment="CENTER" />
+               </children>
+            </HBox>
+         </bottom>
+         <right>
+            <AnchorPane prefHeight="459.0" prefWidth="565.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="512.0" prefWidth="484.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+                     <children>
+                        <VBox layoutX="19.0" layoutY="12.0" prefHeight="492.0" prefWidth="554.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="-24.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="-117.0" AnchorPane.topAnchor="12.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="343.0" prefWidth="341.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <GridPane alignment="CENTER" prefHeight="457.0" prefWidth="418.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="74.39996337890625" minWidth="10.0" prefWidth="61.599979400634766" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="98.40002059936523" minWidth="10.0" prefWidth="98.40002059936523" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <PasswordField fx:id="NewPassField" promptText="New Password" style="-fx-font-size: 18;" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </PasswordField>
+                                          <TextField fx:id="EmailField" prefHeight="40.0" prefWidth="202.0" promptText="Your Email" style="-fx-font-size: 18;" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button fx:id="ConfirmResetPass" mnemonicParsing="false" onAction="#onResetBtnClicked" prefHeight="39.0" prefWidth="191.0" style="-fx-text-fill: black; -fx-background-color: rgb(34, 216, 152); -fx-font-size: 17; -fx-font-family: 'Times New Roman', Times, serif; -fx-background-radius: 15;" text="Reset Password" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Text fx:id="ResetPassMessage" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 34;" text="Reset Your Password" textAlignment="CENTER" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Chulabhorn Likit Display Medium" size="29.0" />
+                                             </font>
+                                          </Text>
+                                          <PasswordField fx:id="VerifyPassField" layoutX="10.0" layoutY="282.0" promptText="Verify Password" style="-fx-font-size: 18;" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </PasswordField>
+                                          <Button fx:id="Back" mnemonicParsing="false" onAction="#onBackBtnClicked" prefHeight="39.0" prefWidth="191.0" style="-fx-text-fill: black; -fx-background-color: rgb(34, 216, 152); -fx-font-size: 17; -fx-background-radius: 15; -fx-font-family: 'Times New Roman', Times, serif;" text="Back to Login" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="6">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </right>
+         <left>
+            <AnchorPane prefHeight="676.0" prefWidth="713.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="12.0" layoutY="99.0" prefHeight="478.0" prefWidth="689.0">
+                     <children>
+                        <VBox layoutX="87.0" layoutY="50.0" prefHeight="428.0" prefWidth="603.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="477.0" prefWidth="706.0">
+                                 <children>
+                                    <GridPane alignment="CENTER" prefHeight="477.0" prefWidth="709.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="345.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="355.0" minWidth="10.0" prefWidth="344.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="355.0" minWidth="10.0" prefWidth="344.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <ImageView fitHeight="336.0" fitWidth="685.0" preserveRatio="true" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                             <image>
+                                                <Image url="@../../../reset-img.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

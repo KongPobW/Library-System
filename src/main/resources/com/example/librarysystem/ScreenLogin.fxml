@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.controllers.LoginScreenController">
+   <children>
+      <BorderPane prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1280.0" style="-fx-background-color: #dedede;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fx:id="Version" strokeType="OUTSIDE" strokeWidth="0.0" text="STIU Library Management System | Version 1.0.0" textAlignment="CENTER" />
+               </children>
+            </HBox>
+         </bottom>
+         <right>
+            <AnchorPane prefHeight="459.0" prefWidth="565.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="512.0" prefWidth="484.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+                     <children>
+                        <VBox layoutX="23.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="-23.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="343.0" prefWidth="341.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <GridPane alignment="CENTER" prefHeight="482.0" prefWidth="398.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="131.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <TextField fx:id="EmailField" prefHeight="0.0" prefWidth="300.0" promptText="Email" style="-fx-font-size: 18;" text="hi@hello.com" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </TextField>
+                                          <PasswordField fx:id="PasswordField" promptText="Password" style="-fx-font-size: 18;" text="world" GridPane.columnSpan="3" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </PasswordField>
+                                          <Button fx:id="Login" mnemonicParsing="false" onAction="#onLoginBtnClicked" prefHeight="39.0" prefWidth="191.0" style="-fx-background-color: rgb(34, 216, 152); -fx-font-family: 'Times New Roman', Times, serif; -fx-text-fill: black; -fx-font-size: 17; -fx-background-radius: 15;" text="Sign in" GridPane.columnSpan="3" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Text fx:id="LoginMessage" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 34;" text="Please Login" textAlignment="CENTER" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Chulabhorn Likit Display Medium" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="ForgotPassHPL" alignment="CENTER" onAction="#onForgetPassLinkClicked" prefHeight="23.0" prefWidth="156.0" style="-fx-text-fill: black; -fx-font-family: 'Times New Roman', Times, serif; -fx-font-size: 15;" text="Forgot Password?" textAlignment="CENTER" textFill="WHITE" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                          <Hyperlink fx:id="RegisterHPL" alignment="CENTER" onAction="#onSignupLinkClicked" prefHeight="38.0" prefWidth="199.0" style="-fx-text-fill: black; -fx-font-family: 'Times New Roman', Times, serif; -fx-font-size: 15;" text="Do not have an account yet?" textAlignment="CENTER" textFill="WHITE" GridPane.columnSpan="3" GridPane.rowIndex="6" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </right>
+         <left>
+            <AnchorPane prefHeight="676.0" prefWidth="713.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="12.0" layoutY="99.0" prefHeight="478.0" prefWidth="689.0">
+                     <children>
+                        <VBox layoutX="56.0" layoutY="-4.0" prefHeight="482.0" prefWidth="634.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="559.0" prefWidth="776.0">
+                                 <children>
+                                    <GridPane alignment="CENTER" prefHeight="531.0" prefWidth="705.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="345.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="355.0" minWidth="10.0" prefWidth="344.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="355.0" minWidth="10.0" prefWidth="344.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Text fx:id="WelcomeMessage" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to STIU Library Management System Application" textAlignment="CENTER" wrappingWidth="650.248046875" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+                                             <font>
+                                                <Font name="Chulabhorn Likit Display Medium" size="42.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView fitHeight="336.0" fitWidth="685.0" preserveRatio="true" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                             <image>
+                                                <Image url="@../../../login-img.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

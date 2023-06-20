@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.controllers.MainScreenController">
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1280.0" style="-fx-background-color: #a7f2fc;">
+                    <children>
+                  <Text fx:id="NameDisplayLabel" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Naris Pornjirawittayakul">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="20.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Copperplate Gothic Light" size="12.0" />
+                     </font>
+                  </Text>
+                        <Button fx:id="MyBook" layoutX="1232.0" layoutY="18.0" mnemonicParsing="false" onAction="#onMyBookBtnClicked" prefHeight="22.0" prefWidth="70.0" style="-fx-background-color: rgb(34, 216, 152); -fx-font-family: 'Times New Roman', Times, serif;" text="My Book">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </Button>
+                        <Button fx:id="BorrowBook" mnemonicParsing="false" onAction="#onBorrowBtnClicked" prefHeight="23.0" prefWidth="59.0" style="-fx-background-color: rgb(34, 216, 152); -fx-font-family: 'Times New Roman', Times, serif;" text="Borrow">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                        <Button fx:id="AddBook" mnemonicParsing="false" onAction="#onAddBtnClicked" prefHeight="22.0" prefWidth="66.0" style="-fx-background-color: rgb(34, 216, 152); -fx-font-family: 'Times New Roman', Times, serif;" text="Add Book">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="EdtBook" mnemonicParsing="false" onAction="#onEditBtnClicked" style="-fx-background-color: rgb(34, 216, 152); -fx-font-family: 'Times New Roman', Times, serif;" text="Edit Book">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                        <Button fx:id="RemoveBook" layoutX="1040.0" layoutY="18.0" mnemonicParsing="false" onAction="#onRemoveBtnClicked" style="-fx-background-color: rgb(34, 216, 152); -fx-font-family: 'Times New Roman', Times, serif;" text="Remove Book">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </Button>
+                  <Button fx:id="LogOut" mnemonicParsing="false" onAction="#onLogoutBtnClicked" style="-fx-background-color: rgb(34, 216, 152); -fx-font-family: 'Times New Roman', Times, serif;" text="Log Out">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                        <Region prefHeight="40.0" prefWidth="223.0" style="-fx-background-color: #a7f2fc;" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="SearchField" onAction="#initSearch" prefHeight="25.0" prefWidth="241.0" promptText="Search">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="Search" layoutX="130.0" layoutY="18.0" mnemonicParsing="false" onAction="#onSearchBtnClicked" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: rgb(34, 216, 152); -fx-font-family: 'Times New Roman', Times, serif;" text="Search">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="Version" text="STIU Library Management System | Version 1.0.0" />
+            </children>
+            <padding>
+                <Insets bottom="2.0" right="2.0" top="2.0" />
+            </padding>
+        </HBox>
+    </bottom>
+    <center>
+        <SplitPane prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <items>
+                <TableView fx:id="BookTable" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="Thumbnail" maxWidth="500.0" minWidth="50.0" prefWidth="303.0" resizable="false" style="-fx-background-color: lightsalmon; -fx-alignment: center;" text="Thumbnail" />
+                        <TableColumn fx:id="Title" maxWidth="828.0" minWidth="50.0" prefWidth="284.0" resizable="false" style="-fx-background-color: lightcoral; -fx-alignment: center;" text="Title" />
+                        <TableColumn fx:id="Description" maxWidth="957.0" minWidth="0.0" prefWidth="554.0" resizable="false" style="-fx-background-color: lightsalmon; -fx-alignment: center;" text="Description" />
+                  <TableColumn fx:id="Status" maxWidth="631.0" minWidth="0.0" prefWidth="137.0" resizable="false" style="-fx-background-color: lightcoral; -fx-alignment: center;" text="Status" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </items>
+        </SplitPane>
+    </center>
+</BorderPane>
