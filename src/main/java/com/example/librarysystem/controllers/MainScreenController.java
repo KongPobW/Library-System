@@ -84,7 +84,7 @@ public class MainScreenController {
 
         if (result == ButtonType.YES) {
             System.out.println(currentUser.getFirstName() + " confirms to log out");
-            FXMLLoader loader = Application.sceneManager.getLoader("ScreenLogin.fxml");
+            FXMLLoader loader = Application.sceneManager.getLoader("screen_login.fxml");
             Scene scene;
 
             try {
@@ -102,7 +102,7 @@ public class MainScreenController {
 
     @FXML
     private void onAddBtnClicked() throws IOException {
-        FXMLLoader loader = Application.sceneManager.getLoader("BookAdd.fxml");
+        FXMLLoader loader = Application.sceneManager.getLoader("book_add.fxml");
 
         Scene scene = new Scene(loader.load());
 
@@ -117,7 +117,7 @@ public class MainScreenController {
         try {
             Book selectedBook = BookTable.getSelectionModel().getSelectedItems().get(0);
 
-            FXMLLoader loader = Application.sceneManager.getLoader("BookEdit.fxml");
+            FXMLLoader loader = Application.sceneManager.getLoader("book_edit.fxml");
 
             Scene scene = new Scene(loader.load());
 
@@ -138,7 +138,7 @@ public class MainScreenController {
 
         ObservableList<Book> selectedBooks = BookTable.getSelectionModel().getSelectedItems();
 
-        FXMLLoader loader = Application.sceneManager.getLoader("ConfirmRemove.fxml");
+        FXMLLoader loader = Application.sceneManager.getLoader("confirm_remove.fxml");
 
         Scene scene = new Scene(loader.load());
 
@@ -153,7 +153,7 @@ public class MainScreenController {
         if (MessageBox.informationMessageBox("My Book Button Clicked", MessageBox.TypeMessageBox.GET_RESULT)) return;
         System.out.println("My Book Button Clicked");
 
-        FXMLLoader loader = Application.sceneManager.getLoader("MyBook.fxml");
+        FXMLLoader loader = Application.sceneManager.getLoader("mybook.fxml");
 
         Scene scene = new Scene(loader.load());
 
@@ -178,7 +178,7 @@ public class MainScreenController {
             }
         }
 
-        FXMLLoader loader = Application.sceneManager.getLoader("ConfirmBorrow.fxml");
+        FXMLLoader loader = Application.sceneManager.getLoader("confirm_borrow.fxml");
 
         Scene scene = new Scene(loader.load());
 

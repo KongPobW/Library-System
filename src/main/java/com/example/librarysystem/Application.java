@@ -16,7 +16,7 @@ public class Application extends javafx.application.Application {
         DatabaseManager.getConnection();
         sceneManager = new SceneManager(stage, getClass());
 
-        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("ScreenLogin.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("screen_login.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         //Set properties of the stage

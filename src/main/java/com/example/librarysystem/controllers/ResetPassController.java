@@ -59,7 +59,7 @@ public class ResetPassController {
     private void onBackBtnClicked() throws IOException {
         System.out.println("Back To Login Button Clicked");
 
-        FXMLLoader loader = Application.sceneManager.getLoader("ScreenLogin.fxml");
+        FXMLLoader loader = Application.sceneManager.getLoader("screen_login.fxml");
 
         Scene scene = new Scene(loader.load());
 

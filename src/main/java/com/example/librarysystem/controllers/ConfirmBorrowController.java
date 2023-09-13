@@ -56,7 +56,7 @@ public class ConfirmBorrowController {
         if (MessageBox.informationMessageBox("Back To Main Screen Button Clicked", MessageBox.TypeMessageBox.GET_RESULT)) return;
         System.out.println("Back To Main Screen Button Clicked");
 
-        FXMLLoader loader = Application.sceneManager.getLoader("ScreenMain.fxml");
+        FXMLLoader loader = Application.sceneManager.getLoader("screen_main.fxml");
 
         Scene scene = new Scene(loader.load());
 

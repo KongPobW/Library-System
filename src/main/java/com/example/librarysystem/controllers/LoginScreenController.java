@@ -75,7 +75,7 @@ public class LoginScreenController {
                     MessageBox.informationMessageBox("Successfully login", MessageBox.TypeMessageBox.NON_RESULT);
                     System.out.println(maybeFoundUser.getFirstName() + " successfully login");
 
-                    FXMLLoader loader = Application.sceneManager.getLoader("ScreenMain.fxml");
+                    FXMLLoader loader = Application.sceneManager.getLoader("screen_main.fxml");
                     Scene scene;
                     try {
                         scene = new Scene(loader.load());
@@ -104,7 +104,7 @@ public class LoginScreenController {
         if (debounce) return;
         debounce = true;
 
-        FXMLLoader loader = Application.sceneManager.getLoader("ScreenResetPass.fxml");
+        FXMLLoader loader = Application.sceneManager.getLoader("screen_reset_pass.fxml");
 
         Scene scene = new Scene(loader.load());
 
@@ -120,7 +120,7 @@ public class LoginScreenController {
         if (debounce) return;
         debounce = true;
 
-        FXMLLoader loader = Application.sceneManager.getLoader("ScreenSignUp.fxml");
+        FXMLLoader loader = Application.sceneManager.getLoader("screen_signup.fxml");
 
         Scene scene = new Scene(loader.load());
 

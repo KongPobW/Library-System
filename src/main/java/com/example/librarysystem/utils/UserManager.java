@@ -85,7 +85,7 @@ public class UserManager {
                 MessageBox.informationMessageBox("Successfully sign up", MessageBox.TypeMessageBox.NON_RESULT);
                 System.out.println("Successfully sign up");
 
-                FXMLLoader loader = Application.sceneManager.getLoader("ScreenLogin.fxml");
+                FXMLLoader loader = Application.sceneManager.getLoader("screen_login.fxml");
 
                 Scene scene = new Scene(loader.load());
 
@@ -126,7 +126,7 @@ public class UserManager {
                 MessageBox.informationMessageBox("Successfully reset password", MessageBox.TypeMessageBox.NON_RESULT);
                 System.out.println("Successfully reset password");
 
-                FXMLLoader loader = Application.sceneManager.getLoader("ScreenLogin.fxml");
+                FXMLLoader loader = Application.sceneManager.getLoader("screen_login.fxml");
 
                 Scene scene = new Scene(loader.load());
 

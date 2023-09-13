@@ -68,7 +68,7 @@ public class EditScreenController {
 
             if (messageError.equals("No Error")) {
 
-                FXMLLoader loader1 = Application.sceneManager.getLoader("ScreenMain.fxml");
+                FXMLLoader loader1 = Application.sceneManager.getLoader("screen_main.fxml");
                 Scene scene1 = new Scene(loader1.load());
                 MainScreenController mainScreenController = loader1.getController();
                 mainScreenController.passUserToMain(currentUser);
@@ -76,7 +76,7 @@ public class EditScreenController {
 
             } else if (messageError.equals("Publisher and Author not found")) {
 
-                FXMLLoader loader2 = Application.sceneManager.getLoader("BookEdit.fxml");
+                FXMLLoader loader2 = Application.sceneManager.getLoader("book_edit.fxml");
                 Scene scene2 = new Scene(loader2.load());
                 EditScreenController editScreenController = loader2.getController();
                 editScreenController.passDataToEdit(currentUser, bookSelected);
@@ -90,7 +90,7 @@ public class EditScreenController {
         if (MessageBox.informationMessageBox("Back To Main Screen Button Clicked", MessageBox.TypeMessageBox.GET_RESULT)) return;
         System.out.println("Back To Main Screen Button Clicked");
 
-        FXMLLoader loader = Application.sceneManager.getLoader("ScreenMain.fxml");
+        FXMLLoader loader = Application.sceneManager.getLoader("screen_main.fxml");
 
         Scene scene = new Scene(loader.load());
 

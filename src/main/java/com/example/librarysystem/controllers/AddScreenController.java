@@ -66,7 +66,7 @@ public class AddScreenController {
 
             if (messageError.equals("No Error")) {
 
-                FXMLLoader loader1 = Application.sceneManager.getLoader("ScreenMain.fxml");
+                FXMLLoader loader1 = Application.sceneManager.getLoader("screen_main.fxml");
 
                 Scene scene = new Scene(loader1.load());
 
@@ -77,7 +77,7 @@ public class AddScreenController {
 
             } else if (messageError.equals("Please type existing author and publisher in database")) {
 
-                FXMLLoader loader2 = Application.sceneManager.getLoader("BookAdd.fxml");
+                FXMLLoader loader2 = Application.sceneManager.getLoader("book_add.fxml");
 
                 Scene scene = new Scene(loader2.load());
 
@@ -88,7 +88,7 @@ public class AddScreenController {
 
             } else if (messageError.equals("ISBN is duplicated with another ISBN in database")) {
 
-                FXMLLoader loader3 = Application.sceneManager.getLoader("BookAdd.fxml");
+                FXMLLoader loader3 = Application.sceneManager.getLoader("book_add.fxml");
 
                 Scene scene = new Scene(loader3.load());
 
@@ -105,7 +105,7 @@ public class AddScreenController {
         if (MessageBox.informationMessageBox("Back To Main Screen Button Clicked", MessageBox.TypeMessageBox.GET_RESULT)) return;
         System.out.println("Back To Main Screen Button Clicked");
 
-        FXMLLoader loader = Application.sceneManager.getLoader("ScreenMain.fxml");
+        FXMLLoader loader = Application.sceneManager.getLoader("screen_main.fxml");
 
         Scene scene = new Scene(loader.load());
 
