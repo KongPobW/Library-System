@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class DatabaseManager {
 
-    private static final String DBNAME = "Library";
+    private static final String DBNAME = "library";
     private static final String USER = "root";
     private static final String PASS = "";
     private static final String HOSTNAME = "localhost";
